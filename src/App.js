@@ -1,29 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { message: 'Welcome' };
-  }
+import FormButton from './components/layout/buttons/FormButton.styled.js';
+import FormField from './components/layout/forms/FormField.styled.js';
+import FormWidget, { FormWidgetRow } from './components/layout/FormWidget/FormWidget.styled.js';
+import WidgetPage from './components/layout/Widget/WidgetPage.styled.js';
 
-  componentWillMount() {
-    return fetch('http://localhost:3001')
-      .then((response) => response.json())
-      .then((responseJson) => this.setState(responseJson))
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>{this.state.message}</h2>
-        </div>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Fragment>
+    <WidgetPage className="participant-search">
+      <FormWidget>
+        <FormWidgetRow className="header">
+          <h1>Participant Search</h1>
+        </FormWidgetRow>
+        <FormWidgetRow>
+          <FormField />
+          <FormButton>
+            {"Search"}
+          </FormButton>
+        </FormWidgetRow>
+      </FormWidget>
+    </WidgetPage>
+  </Fragment>
+);
 
 export default App;

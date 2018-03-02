@@ -1,0 +1,23 @@
+// Colors for widgets
+
+import {
+    WHITE,
+    GREY_LIGHT,
+    GREY_MEDIUM,
+    GREY_MEDIUM_ACCENT,
+    MURKY_BLUE_DARK,
+    MURKY_BLUE_DARK_ACCENT,
+    MURKY_BLUE_LIGHT,
+    MURKY_BLUE_LIGHT_ACCENT
+} from './paletteColors.js';
+
+export const BG = WHITE;
+export const BG_CONTRAST = GREY_LIGHT;
+
+export const BORDER_GREY = GREY_MEDIUM;
+export const SHADOW_GREY = GREY_MEDIUM_ACCENT;
+
+export const BUTTON_BG = MURKY_BLUE_DARK;
+export const BUTTON_BG_ACCENT = MURKY_BLUE_DARK_ACCENT;
+export const BUTTON_TEXT = MURKY_BLUE_LIGHT;
+export const BUTTON_TEXT_ACCENT = MURKY_BLUE_LIGHT_ACCENT;
